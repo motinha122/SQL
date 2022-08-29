@@ -1,0 +1,60 @@
+                                          Tabela de dados
++-------------+
+|             |                +----------+----------------------+
+|             |                |   Nome   |       Telefone       |
+|     SQL     +--------------->+---------------------------------+
+|             |                |   João   |       4002-8922      |
+|             |                |  Pedro   |    0800 7777 1000    |
++-------------+                +----------+----------------------+
+
+Empresas que fornecem serviços de Bancos de Dados:
+
+- SQL lite
+- MariaDB
+- MySQL
+- PostgreSQL
+- Firebase
+- MongoDB
+- Redis
+- Oracle
+
+SELECT * FROM tabela -> seleciona todos os campos da tabela
+
+SELECT nome,idade -> seleciona os campos nome e idade da tabela
+
+SELECT nome FROM tabela WHERE idade = 10 -> seleciona o campo onde a idade é igual a 10 na tabela
+
+SELECT * FROM aluno WHERE nome like 'j%' -> seleciona o aluno cujo nome começa com 'j'
+
+SELECT * FROM aluno WHERE nome like '%a%' -> seleciona o aluno que tem 'a' no nome 
+
+SELECT * FROM aluno WHERE matricula > 1 -> seleciona o aluno que tem a matrícula > 1
+
+SELECT * FROM aluno WHERE matricula < 3 -> seleciona o aluno que tem a matricula < 3
+
+SELECT * FROM aluno WHERE matricula != 1 -> seleciona o aluno que tem a matricula diferente de 1
+
+SELECT * FROM aluno WHERE matricula = 1 + 1 -> seleciona o aluno que tem a matricula igual a 2
+
+SELECT * FROM aluno WHERE matricula = 4%3 -> seleciona o aluno que tem a matricula igual ao resto 1
+
+SELECT * FROM aluno WHERE matricula > 1 AND nome like 'j%' -> seleciona o aluno que tem a matricula igual a 1 e o nome começa com j
+
+SELECT * FROM aluno WHERE matricula > 1 OR nome like 'j%' -> seleciona o aluno que tem a matricula maior que 1 ou o nome começa com j
+
+SELECT * FROM aluno WHERE matricula BETWEEN 1 and 3 -> seleciona o aluno que tem a matricula entre 1 e 3
+
+SELECT * FROM aluno WHERE matricula NOT BETWEEN 1 and 2 -> seleciona o aluno que tem a matricula que não está entre 1 e 2 
+
+SELECT * FROM aluno WHERE matricula IN (1,3) -> seleciona o aluno que tem a matricula 1 e 2
+
+SELECT * FROM aluno WHERE matricula NOT IN (1,3) -> seleciona o aluno que tem a matricula que não é 1 e 3
+
+SELECT * FROM aluno WHERE matricula IS NULL -> seleciona o aluno que a matricula é nula 
+
+SELECT * FROM aluno WHERE matricula IS NOT NULL -> seleciona o aluno que tem a matricula não NATURAL
+
+INSERT INTO aluno(nome,cpf,responsavel) VALUES ("Jõazinho", 40028922, "Mariazinha") -> insere um aluno novo com os valores
+UPDATE aluno SET nome="Mariano Garcia", responsavel ="Marcio Garcia", cpf=23445543322 WHERE matricula = 2 -> atualiza os dados nome, responsavel do aluno que tem a matricula igual a 2
+
+DELETE FROM aluno WHERE matricula = 3 -> deleta da tabela o aluno com a matricula igual a 3
